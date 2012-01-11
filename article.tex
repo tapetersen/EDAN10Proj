@@ -11,6 +11,8 @@ Tobias Petersen, et07tp3}
 
 \maketitle
 
+
+
 \begin{abstract}
 
 Many companies, especially the small ones, don't see the benefits of SCM in their company and decides to not use it.
@@ -20,50 +22,104 @@ We will analyze some of their problems and come up with solutions to them.
 
 
 \end{abstract}
+\newpage
 
-\section{The Problem Company}
+\tableofcontents
+\newpage
 
-The company that should have SCM implemented will be referred to as “The Problem Company” throughout the report.
-It is a small company which have grown in the past few years and intends to keep growing in the future. The current size is about 40-50 employees and develops software to a local cellphone company.
+\section{Problem}
+
+\subsection{The Company}
+
+The company that should have SCM implemented will be referred to as ''The Problem Company'' throughout the report.
+It is a small company, 12 employees which have grown in the past few years and intends to keep growing in the future. The current size is about 40-50 employees and develops software to a local cellphone company.
 
 The company makes a new release to every new phone the local company produces which means they have a new release every 6 months.
 They also need to maintain old cellphones since the local company updates these and The Problem Company needs to come up with new software then.
 
 The company are programming Java and are using Eclipse as their tool.
-With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
 
-WRITE MORE HERE
+\subsection{The Software}
+
+The software is the messaging portion of the phone related to recieving and sending textmessages in various forms over \emph{IM-networks} and  \emph{sms}. There are plans to integrate facebook as well.
+The rapidly changing standards and lack of documentation from the IM-vendors make this a time consuming job and the software needs to be updated on a regular basis to support the new protocols.
+In the beginning there was only one version of the application that was supported but now they have implemented some new features that old phones can't handle but these versions still needs updates to keep supporting the old features.
+
+
+\subsection{Perceived problems}
+
+\begin{itemize}
+\item They spend more and more time on resolving merge conflicts.
+\item Previously solved bugs finds it’s way back into the code again.
+\item Integrating parts of the system takes longer and longer time.
+\item Problem to deliver the product to the customer within deadlines.
+\item If the company keeps growing, the problems will grow as well and at some point become impossible to handle.
+\item Files and work are getting lost as there is no central repository of them with backups.
+\end{itemize}
+
+
 
 \section{Configuration Plan}
 
+
 The term software configuration management is for many companies unknown and they have no clue on how to describe it.
 But in fact they might use some of the concepts without even knowing it.
-Companies can come up with their own solutions and integrate them into the system and can be either good or bad. When we are about to write the configuration plan we will have to tailor SCM to this company and have in mind things like, which programming language the company is using and which tools are used.
+Companies can come up with their own solutions and integrate them into the system and can be either good or bad.
+When we are about to write the configuration plan we will have to tailor SCM to this company and have in mind things like, which programming language the company is using and which tools are used.
 
-The configuration plan can be written in two different approaches.
-cite{SCMPLAN} It can either be done before the implementation of SCM in a big bang approach or we can use a more iterative method and complete the plan meanwhile the project goes on.
-Since we are new to the role as a configuration manager and don't have a precise definition on the company and its details it might be too hard to go with the iterative approach.
-This way we can start with the most important parts of the SCM plan in the beginning.
+The configuration plan can be written in two different approaches. \cite{SCMPLAN} It can either be done before the implementation of SCM in a big bang approach or we can use a more iterative method and complete the plan meanwhile the project goes on. 
+Since we are new to the role as a configuration manager and don’t have a precise definition on the company and its details it might be too hard to go with the iterative approach. This way we can start with the most important parts of the SCM plan in the beginning
 
-To write a good configuration plan can be hard, it is different for every company and will determinate the future of SCM in the future.
-A good SCM plan can rise a sinking company as well sink a well working.
-In an article written by Bounds and Dart they describe the SCM plan as one of the three most important keys to successfully attain a SCM solution /cite{BoundsDart}.
-It is possible to write one all by yourself as a configuration manager but with our small experience in the area we will take help from someone with more skills.
-We will also have good contact with the product manager to make this plan as good as possible.
+To write a good configuration plan can be hard, it is different for every company and will determinate the future of SCM in the future. A good SCM plan can rise a sinking company as well sink a well working. In an article written by Bounds and Dart they describe the SCM plan as one of the three most important keys to successfully attain a SCM solution \cite{BoundsDart}.  It is possible to write one all by yourself as a configuration manager but with our small experience in the area we will take help from someone with more skills. We will also have good contact with the product manager to make this plan as good as possible.
 
-Since it is so hard to write a good SCM plan we will need more help then a helping person. There are several standards to build a frame or a skeleton upon but one cannot be suitable for all companies, there cannot be one universal standard.
-The three most popular are NASA, IEEE and DOD. \cite{SCMPLAN}
+A SCM plan is a good checklist for the configuration manager to check whether all is kept in mind for the SCM implementation or something is missed. When all the checkpoints are completed we have a completed SCM plan to work upon and we know we have thought of all the details. Once the configuration plan is completed it’s not finished. Changes are often made to the project which will have impact on the plan, we therefore need to change the configuration plan as well so it is always updated. This is one of the reasons why we need to have the configuration plan as a configuration item (CI) which we will describe later on in the paper.
 
-A SCM plan is a good checklist for the configuration manager to check whether all is kept in mind for the SCM implementation or something is missed.
-When all the checkpoints are completed we have a completed SCM plan to work upon and we know we have thought of all the details.
-Once the configuration plan is completed it's not finished.
-Changes are often made to the project which will have impact on the plan, we therefore need to change the configuration plan as well so it is always updated.
-This is one of the reasons why we need to have the configuration plan as a configuration item (CI) which we will describe later on in the paper.
+A complete configuration plan will cover everything to implement SCM to a specific company and is a very large document. Here in this report we will therefore only discuss a few aspects of it which we decide are the most important and interesting. The SCM plan will discuss how to solve The Problem Companiy's problems.
 
-A complete configuration plan will cover everything to implement SCM to a specific company and is a very large document.
-Here in this report we will therefore only discuss a few aspects of it which we decide are the most important and interesting.
+
+
+\section{Configuration Identification}
+
+\subsection{Background}
+The identification part of the plan contains useful information about how objects should be treated. One must decide whether or not the object should be under version control. When this should be decided one should ask the question “Is it necessary to have this object under version control in order to be able to build the complete, working release?”. If the answer to that question is yes, then the object should be configuration item (an item under version control).
+Usually, the major part of the object should be under version control. What usually shouldn't be under version control is items such as PM, mails, announcements, memos.
+
+Also labeling and numbering scheme must be decided. The numbering scheme for forms must also be specified, such as for CCB documents etc.
+
+In the identification process the different baselines must be identified. And more specifically who creates them, authorizes and verifies them, as well as the contents of them.
+
+\subsection{This software}
+
+Kanske lite diagram visande CI
+
+Binären måste kontrolleras, dokumentation i versionskontroll också
+Design dokument, diagram måste numreras/hanteras
+
+Since we will be implementing the SCM plan iteratively we will start off with some baselines.
+
+-documentation
+
+-source code
+Levereras som binär + dokumentation.
+Mjukvara har inbyggd ``labelling''
+
+\subsection{Version control}
+Med lämplig mjukvara för kod + dokumentation.
+Design dokument binära och hanterasw av icke-kodare (akm) bättre med central filserver+versionsnummer manuellt.
+
+
+
+\section{Configuration Control}
+
+Hur stor ccb?
+Hur rigorös CR kontroll?
+
+\subsection{Branching Pattern}
+
+Hitt' på nåt.
+Hur vill vi det ska fungera (utan att ta hänsyn till verktyg här, ta det senare)
 
 \section{Tools}
-
+With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
 
 \end{document}
