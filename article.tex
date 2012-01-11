@@ -151,10 +151,12 @@ In the case that the CCB gets involved, it will pretty much handle change reques
 
 \subsection{Branching Pattern}\printindex
 
-As the company hasn̈́'t used any form of SCM-tool previously explicit branching didn't exist.
+As the company hasn't used any form of SCM-tool previously explicit branching didn't exist.
 The copying of code between subgroups working on different modules however created implicit branches whenever two version weren't in sync. This creates an implicit feature branch model with merges at each release and sometimes in between but not very often as those merges are hard to do and requires that all of the changes made by the other team be merged together with the needed features/changes. This makes the merges very hard to do when it's finally time to do so and is the cause of the long merging periods/missed deadlines.
 
-The sporadic merges also gives a composition model but where the choices to make a composition of are very limited leading to collaboration
+The sporadic merges also gives a composition model but where the choices to make a composition of are very limited (the one we have since release or a dev. one) leading to collaboration problems.
+
+The branching pattern we propose on the module level are to have each group to develop their module in  a developement branch and when it's \emph{reasonably} stable merge that to a
 
 \subsection{Bill of Material}
 
