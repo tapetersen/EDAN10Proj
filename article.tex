@@ -21,18 +21,37 @@ We will analyze some of their problems and come up with solutions to them.
 
 \end{abstract}
 
-\section{The Problem Company}
+\section{Problem}
 
-The company that should have SCM implemented will be referred to as “The Problem Company” throughout the report.
-It is a small company which have grown in the past few years and intends to keep growing in the future. The current size is about 40-50 employees and develops software to a local cellphone company.
+\subsection{The Company}
+
+The company that should have SCM implemented will be referred to as ''The Problem Company'' throughout the report.
+It is a small company, 12 employees which have grown in the past few years and intends to keep growing in the future. The current size is about 40-50 employees and develops software to a local cellphone company.
 
 The company makes a new release to every new phone the local company produces which means they have a new release every 6 months.
 They also need to maintain old cellphones since the local company updates these and The Problem Company needs to come up with new software then.
 
 The company are programming Java and are using Eclipse as their tool.
-With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
 
-WRITE MORE HERE
+\subsection{The Software}
+
+The software is the messaging portion of the phone related to recieving and sending textmessages in various forms over \emph{IM-networks} and  \emph{sms}. There are plans to integrate facebook as well.
+The rapidly changing standards and lack of documentation from the IM-vendors make this a time consuming job and the software needs to be updated on a regular basis to support the new protocols.
+In the beginning there was only one version of the application that was supported but now they have implemented some new features that old phones can't handle but these versions still needs updates to keep supporting the old features.
+
+
+\subsection{Perceived problems}
+
+\begin{itemize}
+\item They spend more and more time on resolving merge conflicts.
+\item Previously solved bugs finds it’s way back into the code again.
+\item Integrating parts of the system takes longer and longer time.
+\item Problem to deliver the product to the customer within deadlines.
+\item If the company keeps growing, the problems will grow as well and at some point become impossible to handle.
+\item Files and work are getting lost as there is no central repository of them with backups.
+\end{itemize}
+
+
 
 \section{Configuration Plan}
 
@@ -63,7 +82,27 @@ This is one of the reasons why we need to have the configuration plan as a confi
 A complete configuration plan will cover everything to implement SCM to a specific company and is a very large document.
 Here in this report we will therefore only discuss a few aspects of it which we decide are the most important and interesting.
 
-\section{Tools}
 
+\section{Configuration Identification}
+
+\subsection{Generally}
+The identification part of the plan contains useful information about how objects should be treated. One must decide whether or not the object should be under version control. When this should be decided one should ask the question “Is it necessary to have this object under version control in order to be able to build the complete, working release?”. If the answer to that question is yes, then the object should be configuration item (an item under version control).
+Usually, the major part of the object should be under version control. What usually shouldn't be under version control is items such as PM, mails, announcements, memos.
+
+Also labeling and numbering scheme must be decided. The numbering scheme for forms must also be specified, such as for CCB documents etc.
+
+In the identification process the different baselines must be identified. And more specifically who creates them, authorizes and verifies them, as well as the contents of them.
+
+\subsection{Particularly}
+Since we will be implementing the SCM plan iteratively we will start off with some baselines.
+
+\section{Configuration Control}
+
+\section{Configuration Status Accounting}
+
+\section{Configuration Auditing}
+
+\section{Tools}
+With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
 
 \end{document}
