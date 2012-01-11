@@ -1,5 +1,6 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8x]{inputenc}
+\usepackage{cite}
 
 %opening
 \title{SCM plan for a troubling company}
@@ -144,11 +145,12 @@ In the case that the CCB gets involved, it will pretty much handle change reques
 % Hur stor ccb?
 % Hur rigorös CR kontroll?
 
-
 \subsection{Branching Pattern}
 
-One of The Problem Company's problems is that they spend more and more time on resolving merge conflicts.
-This could be the problem caused by a wrong branch pattern.
+As the company hasn̈́'t used any form of SCM-tool previously explicit branching didn't exist.
+The copying of code between subgroups working on different modules however created implicit branches whenever two version weren't in sync. This creates an implicit feature branch model with merges at each release and sometimes in between but not very often as those merges are hard to do and requires that all of the changes made by the other team be merged together with the needed features/changes. This makes the merges very hard to do when it's finally time to do so and is the cause of the long merging periods/missed deadlines.
+
+The sporadic merges also gives a composition model but where the choices to make a composition of are very limited leading to collaboration
 
 \subsection{Bill of Material}
 
@@ -160,5 +162,8 @@ Everyone in the project must be able to find this BoM without too much effort an
 
 \section{Tools}
 With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
+
+\bibliography{refs}
+\bibliographystyle{plain}
 
 \end{document}
