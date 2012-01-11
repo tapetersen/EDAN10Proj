@@ -64,6 +64,7 @@ This has worked quite well but the recent size increase makes problems with peop
 \item Previously solved bugs finds it’s way back into the code again.
 \item Integrating parts of the system takes longer and longer time.
 \item Problem to deliver the product to the customer within deadlines.
+\item When customers have problem with previous releases the company can't fix this easily.
 \item If the company keeps growing, the problems will grow as well and at some point become impossible to handle.
 \item Files and work are getting lost as there is no central repository of them with backups.
 \end{itemize}
@@ -156,8 +157,16 @@ In the case that the CCB gets involved, it will pretty much handle change reques
 
 \subsection{Branching Pattern}
 
-Hitt' på nåt.
-Hur vill vi det ska fungera (utan att ta hänsyn till verktyg här, ta det senare)
+One of The Problem Company's problems is that they spend more and more time on resolving merge conflicts. 
+This could be the problem caused by a wrong branch pattern. 
+
+\subsection{Bill of Material}
+
+The company releases a new product every 6 months which results we have several different products to maintain. A problem is that when a customer finds a bug or wants a new feature in a previous release The Problem Company can't reproduce this system or it's very hard. We will need something so we both know exactly what system the customer is using and so the programmer who will fix this problem easy can reconstruct the system to work on. A way to do this is to use a Bill of Material (BoM). When we release a product we then save information about the release such as which version every component is using, what hardware are we using, which features are implemented, test information etc. 
+When a customer has a problem with a certain release we can look at the BoM and know exactly what system the customer is using and we can start working on a fix right away.
+We will also need version control of the product to get the correct version of each component in the program.
+Everyone in the project must be able to find this BoM without too much effort and we need a system which makes it easy to setup a certain BoM on the computer which the programmer is using. Otherwise we loose the benefits with the BoM. The software which the company is producing are used on specific cellphones so we need to be able to reproduce the hardware somehow. This can be done by storing some cellphones but very often will the software not interact with the actual hardware and we can then focus on just software information. In the BoM we store both software information about our product but also the software the cellphone is using.
+
 
 \section{Tools}
 With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
