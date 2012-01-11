@@ -11,6 +11,8 @@ Tobias Petersen, et07tp3}
 
 \maketitle
 
+
+
 \begin{abstract}
 
 Many companies, especially the small ones, don't see the benefits of SCM in their company and decides to not use it.
@@ -20,6 +22,10 @@ We will analyze some of their problems and come up with solutions to them.
 
 
 \end{abstract}
+\newpage
+
+\tableofcontents
+\newpage
 
 \section{Problem}
 
@@ -56,7 +62,10 @@ In the beginning there was only one version of the application that was supporte
 \section{Configuration Plan}
 
 
-The term software configuration management is for many companies unknown and they have no clue on how to describe it. But in fact they might use some of the concepts without even knowing it. Companies can come up with their own solutions and integrate them into the system and can be either good or bad. When we are about to write the configuration plan we will have to tailor SCM to this company and have in mind things like, which programming language the company is using and which tools are used.
+The term software configuration management is for many companies unknown and they have no clue on how to describe it.
+But in fact they might use some of the concepts without even knowing it.
+Companies can come up with their own solutions and integrate them into the system and can be either good or bad.
+When we are about to write the configuration plan we will have to tailor SCM to this company and have in mind things like, which programming language the company is using and which tools are used.
 
 The configuration plan can be written in two different approaches. \cite{SCMPLAN} It can either be done before the implementation of SCM in a big bang approach or we can use a more iterative method and complete the plan meanwhile the project goes on. 
 Since we are new to the role as a configuration manager and don’t have a precise definition on the company and its details it might be too hard to go with the iterative approach. This way we can start with the most important parts of the SCM plan in the beginning
@@ -71,7 +80,7 @@ A complete configuration plan will cover everything to implement SCM to a specif
 
 \section{Configuration Identification}
 
-\subsection{Generally}
+\subsection{Background}
 The identification part of the plan contains useful information about how objects should be treated. One must decide whether or not the object should be under version control. When this should be decided one should ask the question “Is it necessary to have this object under version control in order to be able to build the complete, working release?”. If the answer to that question is yes, then the object should be configuration item (an item under version control).
 Usually, the major part of the object should be under version control. What usually shouldn't be under version control is items such as PM, mails, announcements, memos.
 
@@ -79,18 +88,36 @@ Also labeling and numbering scheme must be decided. The numbering scheme for for
 
 In the identification process the different baselines must be identified. And more specifically who creates them, authorizes and verifies them, as well as the contents of them.
 
-\subsection{Particularly}
+\subsection{This software}
+
+Kanske lite diagram visande CI
+
+Binären måste kontrolleras, dokumentation i versionskontroll också
+Design dokument, diagram måste numreras/hanteras
+
 Since we will be implementing the SCM plan iteratively we will start off with some baselines.
 
 -documentation
 
 -source code
+Levereras som binär + dokumentation.
+Mjukvara har inbyggd ``labelling''
+
+\subsection{Version control}
+Med lämplig mjukvara för kod + dokumentation.
+Design dokument binära och hanterasw av icke-kodare (akm) bättre med central filserver+versionsnummer manuellt.
+
+
 
 \section{Configuration Control}
 
-\section{Configuration Status Accounting}
+Hur stor ccb?
+Hur rigorös CR kontroll?
 
-\section{Configuration Auditing}
+\subsection{Branching Pattern}
+
+Hitt' på nåt.
+Hur vill vi det ska fungera (utan att ta hänsyn till verktyg här, ta det senare)
 
 \section{Tools}
 With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
