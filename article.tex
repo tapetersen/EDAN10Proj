@@ -128,17 +128,28 @@ Design dokument binära och hanterasw av icke-kodare (akm) bättre med central f
 
 The main idea behind configuration control is to achieve control of changes, what impact they'll have and their costs.
 
-Since this company is relatively small, the extent of CCB and it's usage will be a somewhat limited in contrary to the general idea of a CCB.
+Since this company is relatively small, the extent of CCB and it's usage will be somewhat limited in contrary to the general idea of a CCB.
 The CCB consist of the normal lineup with: chairperson, secretary, members and specialists \cite{daniels}. We will select the project manager
 to be the chairman and the secretary will be the configuration manager in the company. The project manager will appoint appropriate people to be
-members of the CCB and specilists will be contacted on a ``when needed''-basis.
+members of the CCB and specialists will be contacted on a ``when needed''-basis. There will likely be one representative from each module with the exception
+that some modules representatives will be considered experts instead, so that they will not be needed for each meeting.
 
-Not every change will be handled by the CCB in our case
+The software in our case is as described earlier divided into modules. Each module consists of around five developers and they're all
+located in the same working area. The changes made on this level are traced through commit-comments and the discussion is taken within
+the group orally.
 
+The CCB are only involved when it comes to changes that cover more than one module (the API between modules is modified).
+In the case that the CCB gets involved, it will pretty much handle change requests that traditional way, namely:
 
+\begin{enumerate}
+ \item A change is submitted to the SCM-manager.
+ \item The SCM-manager decides if this change needs a meeting.
+ \item If a meeting is needed, one is planned.
+ \item On the meeting the chairman takes input and decide to approve or note depending on the input.
+\end{enumerate}
 
-Hur stor ccb?
-Hur rigorös CR kontroll?
+% Hur stor ccb?
+% Hur rigorös CR kontroll?
 
 
 \subsection{Branching Pattern}
