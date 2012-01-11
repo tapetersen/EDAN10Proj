@@ -15,8 +15,8 @@ Tobias Petersen, et07tp3}
 
 Many companies, especially the small ones, don't see the benefits of SCM in their company and decides to not use it.
 This company however have now seen the light and need help to implement it.
-This report will go through some aspects in this implementation and will focus on a relatively small software company of 40-50 employees.
-We will analyze some of their problems and come up with solutions to them.
+This report goes through some aspects in this implementation and focus on a relatively small software company of 40-50 employees.
+We analyze some of their problems and come up with solutions in the form of a configuration plan.
 
 
 \end{abstract}
@@ -49,10 +49,12 @@ If synchronisation is needed for API changes and the like it's solved in an ad h
 The documentation is modified by whoever changes the API as microsoft doc files on a central fileserver.
 When a release is needed the different modules are copied to a central computer and some persons from each team try to merge together these files by hand until they can produce a build that works.
 
-\subsection{documentation}
+\subsection{Documentation}
 The documentation is modified by whoever changes the API as microsoft doc files on a central fileserver.
 Conflicts are avoided by keeping those files open if you're trying to change them.
 This has worked quite well but the recent size increase makes problems with people waiting on these files and forgetting to close them a problem.
+
+\subsection{The build}
 
 
 \subsection{Perceived problems}
@@ -76,7 +78,7 @@ But in fact they might use some of the concepts without even knowing it.
 Companies can come up with their own solutions and integrate them into the system and can be either good or bad.
 When we are about to write the configuration plan we will have to tailor SCM to this company and have in mind things like, which programming language the company is using and which tools are used.
 
-The configuration plan can be written in two different approaches. \cite{SCMPLAN} It can either be done before the implementation of SCM in a big bang approach or we can use a more iterative method and complete the plan meanwhile the project goes on. 
+The configuration plan can be written in two different approaches. \cite{SCMPLAN} It can either be done before the implementation of SCM in a big bang approach or we can use a more iterative method and complete the plan meanwhile the project goes on.
 Since we are new to the role as a configuration manager and don’t have a precise definition on the company and its details it might be too hard to go with the iterative approach.
 This way we can start with the most important parts of the SCM plan in the beginning
 
