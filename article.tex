@@ -27,34 +27,52 @@ We analyze some of their problems and come up with solutions in the form of a co
 
 \subsection{The Company}
 
-The company that should have SCM implemented will be referred to as ''The Problem Company'' throughout the report.
-It is a small company, 12 employees which have grown in the past few years and intends to keep growing in the future.
-The current size is about 40-50 employees and develops software to a local cellphone company. 
-The Problem Company is located in Lund and has no plans on moving or expand to other cities. Therefore all who works in the project are located in the same building, however the customer is located in a neighboring building and needs to have good contact with them.
+The company that should have SCM implemented will be referred to as ''The
+Problem Company'' throughout the report. It is a small company, 12 employees
+which have grown in the past few years and intends to keep growing in the
+future. The current size is about 40-50 employees and develops software to a
+local cellphone company. The Problem Company is located in Lund and has no plans
+on moving or expand to other cities. Therefore all who works in the project are
+located in the same building, however the customer is located in a neighboring
+building and needs to have good contact with them.
 
-The company makes a new release to every new phone the local company produces which means they have a new release every 6 months.
-They also need to maintain old cellphones since the local company updates these and The Problem Company needs to come up with new software then.
+The company makes a new release to every new phone the local company produces
+which means they have a new release every 6 months. They also need to maintain
+old cellphones since the local company updates these and The Problem Company
+needs to come up with new software then.
 
-The company are programming Java and are using Eclipse as their tool.
-Since the beginning they have used traditional programming instead of agile and are well familiar and comfortable with it.
-
-
+The company are programming Java and are using Eclipse as their tool. Since the
+beginning they have used traditional programming instead of agile and are well
+familiar and comfortable with it.
 
 \subsection{The Software}
 
-The software is the messaging portion of the phone related to recieving and sending textmessages in various forms over \emph{IM-networks} and  \emph{sms}. There are plans to integrate facebook as well.
-The rapidly changing standards and lack of documentation from the IM-vendors make this a time consuming job and the software needs to be updated on a regular basis to support the new protocols.
-In the beginning there was only one version of the application that was supported but now they have implemented some new features that old phones can't handle but these versions still needs updates to keep supporting the old features.
-The software is developed in modules with small groups working on separate modules such as the UI and the different backends for various protocols.
-The separation is ok the modules can be developed separately most of the time but occasionally synchronisation is needed between releases for API changes or new features affecting the backends.
-If synchronisation is needed for API changes and the like it's solved in an ad hoc fashion by copying files on thumbdrives or internal emails.
-The documentation is modified by whoever changes the API as microsoft doc files on a central fileserver.
-When a release is needed the different modules are copied to a central computer and some persons from each team try to merge together these files by hand until they can produce a build that works.
+The software is the messaging portion of the phone related to recieving and
+sending textmessages in various forms over \emph{IM-networks} and  \emph{sms}.
+There are plans to integrate facebook as well. The rapidly changing standards
+and lack of documentation from the IM-vendors make this a time consuming job and
+the software needs to be updated on a regular basis to support the new
+protocols. In the beginning there was only one version of the application that
+was supported but now they have implemented some new features that old phones
+can't handle but these versions still needs updates to keep supporting the old
+features. The software is developed in modules with small groups working on
+separate modules such as the UI and the different backends for various
+protocols. The separation is ok the modules can be developed separately most of
+the time but occasionally synchronisation is needed between releases for API
+changes or new features affecting the backends. If synchronisation is needed for
+API changes and the like it's solved in an ad hoc fashion by copying files on
+thumbdrives or internal emails. The documentation is modified by whoever changes
+the API as microsoft doc files on a central fileserver. When a release is needed
+the different modules are copied to a central computer and some persons from
+each team try to merge together these files by hand until they can produce a
+build that works.
 
 \subsection{Documentation}
-The documentation is modified by whoever changes the API as microsoft doc files on a central fileserver.
-Conflicts are avoided by keeping those files open if you're trying to change them.
-This has worked quite well but the recent size increase makes problems with people waiting on these files and forgetting to close them a problem.
+The documentation is modified by whoever changes the API as microsoft doc files
+on a central fileserver. Conflicts are avoided by keeping those files open if
+you're trying to change them. This has worked quite well but the recent size
+increase makes problems with people waiting on these files and forgetting to
+close them a problem.
 
 \subsection{The build}
 
@@ -77,97 +95,281 @@ This has worked quite well but the recent size increase makes problems with peop
 
 
 The term software configuration management is for many companies unknown and they have no clue on how to describe it.
-But in fact they might use some of the concepts without even knowing it.
-Companies can come up with their own solutions and integrate them into the system and can be either good or bad.
-When we are about to write the configuration plan we will have to tailor SCM to this company and have in mind things like, which programming language the company is using and which tools are used.
+But in fact they might use some of the concepts without even knowing
+it. Companies can come up with their own solutions and integrate them into the
+system and can be either good or bad. When we are about to write the
+configuration plan we will have to tailor SCM to this company and have in mind
+things like, which programming language the company is using and which tools are
+used.
 
-The configuration plan can be written in two different approaches. \cite{SCMPLAN} It can either be done before the implementation of SCM in a big bang approach or we can use a more iterative method and complete the plan meanwhile the project goes on.
-Since we are new to the role as a configuration manager and don’t have a precise definition on the company and its details it might be too hard to go with the iterative approach.
-This way we can start with the most important parts of the SCM plan in the beginning
+The configuration plan can be written in two different approaches.
+\cite{SCMPLAN} It can either be done before the implementation of SCM in a big
+bang approach or we can use a more iterative method and complete the plan
+meanwhile the project goes on. Since we are new to the role as a configuration
+manager and don’t have a precise definition on the company and its details it
+might be too hard to go with the iterative approach. This way we can start with
+the most important parts of the SCM plan in the beginning
 
-To write a good configuration plan can be hard, it is different for every company and will determinate the future of SCM in the future.
-A good SCM plan can rise a sinking company as well sink a well working.
-In an article written by Bounds and Dart they describe the SCM plan as one of the three most important keys to successfully attain a SCM solution \cite{BoundsDart}.
-It is possible to write one all by yourself as a configuration manager but with our small experience in the area we will take help from someone with more skills.
-We will also have good contact with the product manager to make this plan as good as possible.
+To write a good configuration plan can be hard, it is different for every
+company and will determinate the future of SCM in the future. A good SCM plan
+can rise a sinking company as well sink a well working. In an article written by
+Bounds and Dart they describe the SCM plan as one of the three most important
+keys to successfully attain a SCM solution \cite{BoundsDart}. It is possible to
+write one all by yourself as a configuration manager but with our small
+experience in the area we will take help from someone with more skills. We will
+also have good contact with the product manager to make this plan as good as
+possible.
 
-A SCM plan is a good checklist for the configuration manager to check whether all is kept in mind for the SCM implementation or something is missed. When all the checkpoints are completed we have a completed SCM plan to work upon and we know we have thought of all the details. Once the configuration plan is completed it’s not finished. Changes are often made to the project which will have impact on the plan, we therefore need to change the configuration plan as well so it is always updated. This is one of the reasons why we need to have the configuration plan as a configuration item (CI) which we will describe later on in the paper.
+A SCM plan is a good checklist for the configuration manager to check whether 
+all is kept in mind for the SCM implementation or something is missed. When all
+the checkpoints are completed we have a completed SCM plan to work upon and we
+know we have thought of all the details. Once the configuration plan is
+completed it’s not finished. Changes are often made to the project which will
+have impact on the plan, we therefore need to change the configuration plan as
+well so it is always updated. This is one of the reasons why we need to have the
+configuration plan as a configuration item (CI) which we will describe later on
+in the paper.
 
-A complete configuration plan will cover everything to implement SCM to a specific company and is a very large document. Here in this report we will therefore only discuss a few aspects of it which we decide are the most important and interesting. The SCM plan will discuss how to solve The Problem Companiy's problems.
-
-
+A complete configuration plan will cover everything to implement SCM to a 
+specific company and is a very large document. Here in this report we will
+therefore only discuss a few aspects of it which we decide are the most
+important and interesting. The SCM plan will discuss how to solve The Problem
+Companiy's problems.
 
 \section{Configuration Identification}
 
 \subsection{Background}
-The identification part of the plan contains useful information about how objects should be treated. One must decide whether or not the object should be under version control. When this should be decided one should ask the question ``Is it necessary to have this object under version control in order to be able to build the complete, working release?''. If the answer to that question is yes, then the object should be configuration item (an item under version control).
-Usually, the major part of the object should be under version control. What usually shouldn't be under version control is items such as PM, mails, announcements, memos.
+The identification part of the plan contains useful information about how
+objects should be treated. One must decide whether or not the object should be
+under version control. When this should be decided one should ask the question
+``Is it necessary to have this object under version control in order to be able
+to build the complete, working release?''. If the answer to that question is
+yes, then the object should be configuration item (an item under version
+control). Usually, the major part of the object should be under version control.
+What usually shouldn't be under version control is items such as PM, mails,
+announcements, memos.
 
-Also labeling and numbering scheme must be decided. The numbering scheme for forms must also be specified, such as for CCB documents etc.
+Also labeling and numbering scheme must be decided.
+The numbering scheme for forms must also be specified, such as for CCB
+documents etc.
 
-In the identification process the different baselines must be identified. And more specifically who creates them, authorizes and verifies them, as well as the contents of them.\cite{cagan}
+In the identification process the different baselines must be identified. And
+more specifically who creates them, authorizes and verifies them, as well as the
+contents of them \cite{cagan}.
 
 \subsection{This software}
 
-The configuration identification for the software part is quite straightforward where every module is it's own configuration item and can be subdivided in the files as the next step of the hierarchy.
-For the files the filenames and their directories provides a natural naming and an SCM-tool makes this easy to keep track of. The various modules are then combined and this can be kept in the tool as well or be managed manually.
-As the documentation actually is tied to the code and it's versions it should, if possible be controlled in the same system to keep it in sync with the code.
-The next higher level of configutration control needed is the release level where the build environment and the actual produced binaries together with the released documentation.
-This also needs to be documented and controlled in some way as the released models are supported for some years at least.
+The configuration identification for the software part is quite straightforward
+ where every module is it's own configuration item and can be subdivided in the
+files as the next step of the hierarchy. For the files the filenames and their
+directories provides a natural naming and an SCM-tool makes this easy to keep
+track of. The various modules are then combined and this can be kept in the tool
+as well or be managed manually. As the documentation actually is tied to the
+code and it's versions it should, if possible be controlled in the same system
+to keep it in sync with the code. The next higher level of configutration
+control needed is the release level where the build environment and the actual
+produced binaries together with the released documentation. This also needs to
+be documented and controlled in some way as the released models are supported
+for some years at least.
 
 
 \subsection{Other items}
 
-As the delivered product is in form of binaries and documentation for inclusion in a larger product there is not much other releasables to control.
-However to structure the change process and design of new features design and specification documents are created for communication between customer and the company as well as between internal designers and the coders. These needs to be versioned and saved as well to be able to verify that the product performs according to the specifications.
+As the delivered product is in form of binaries and documentation for inclusion
+in a larger product there is not much other releasables to control. However to
+structure the change process and design of new features design and specification
+documents are created for communication between customer and the company as well
+as between internal designers and the coders. These needs to be versioned and
+saved as well to be able to verify that the product performs according to the
+specifications.
 
 \section{Configuration Control}
 
+
+\subsection{Branching Pattern}
+
+As the company hasn't used any form of SCM-tool previously explicit branching didn't exist.
+The copying of code between subgroups working on different modules however
+created implicit branches whenever two version weren't in sync. This creates an
+implicit feature branch model with merges at each release and sometimes in
+between but not very often as those merges are hard to do and requires that all
+of the changes made by the other team be merged together with the needed
+features/changes. This makes the merges very hard to do when it's finally time
+to do so and is the cause of the long merging periods/missed deadlines.
+
+The sporadic merges also gives a composition model but where the choices to make
+a composition of are very limited (the one we have since release or a dev. one)
+leading to collaboration problems. The teams mostly needs to work against the
+modules from the previous release but occasionally the need to test or work
+against an intermediate version from another group exists. This is frequent
+enough that the possiblility to do this is a requirement from the system.
+
+While being able to use the developing version from another group is important
+so is the need for the other group to be able to continue their work without
+risk of breaking the build for the first. This can be a serious problem as even
+if the group is extremely thorough with testing their changes before commit an
+API change must now be synchronized with the other group wich slows development
+down a lot. 
+
+The branching pattern we propose on the module level are to have each group to 
+develop their module in  a developement branch and when it's time for a release
+or synchronization with another team to create a branch for that. This is
+described in \cite{StreamedLines} as \emph{deffered branching} pattern since
+the development happens in mainline and is branched when needed for
+incompatible changes. The releases can then be composed from those branches.
+This pattern also avoids a too wide branching structure as the releases don't
+have branches of their own and thus will minimize integration work needed when
+mergin branches as the need for merges should be limited to backported
+bugfixes from the mainline to the release branches. 
+
+The release branches are the groups releases versus the rest of the company and
+used by the higher level of the CI hierarchy as items to compose releases of
+the product from. As such they have a high need for stability and there would
+need to be either a freeze of the development line prior to branching of the
+release or the release branch have to be done quite some time before the
+release to ensure the build is as stable as needed. The freeze necessarily
+stops development of new features until the branch is made while the second
+approach causes more integration between the branches to be made (as any bugs
+found will need to be fixed on both branches). This decision can be made on a
+release by release base depending on the current needs.
+
+
+\subsubsection{Team variations}
+
+The above describes the strategy main branches and patterns all groups should
+use to facilitate working releases and collaboration between the groups. In
+maintaining the development branch the groups are free to any strategy they
+like inform of individual branches for each developer or feature that are then
+merged with the main branch or just doing changes in such small increments that
+commiting directly to the dev branch is feasible. The experience of individual
+developers regarding version control is varied and some groups may benefit from
+more advanced branching patterns that others.
+
+
 \subsection{The change process}
-The main idea behind configuration control is to achieve control of changes, what impact they'll have and their costs.
+The main idea behind configuration control is to achieve control of changes,
+what impact they'll have and their costs.
 
-Since this company is relatively small, the extent of CCB and it's usage will be somewhat limited in contrary to the general idea of a CCB.
-The CCB consist of the normal line up with: chairperson, secretary, members and specialists \cite{daniels}. We will select the project manager
-to be the chairman and the secretary will be the configuration manager in the company. The project manager will appoint appropriate people to be
-members of the CCB and specialists will be contacted on a ``when needed''-basis. There will likely be one representative from each module with the exception
-that some modules representatives will be considered experts instead, so that they will not be needed for each meeting.
+Since this company is relatively small, the extent of CCB and it's usage will be
+somewhat limited in contrary to the general idea of a CCB. The CCB consist of
+the normal line up with: chairperson, secretary, members and specialists
+\cite{daniels}. We will select the project manager to be the chairman and the
+secretary will be the configuration manager in the company. The project manager
+will appoint appropriate people to be members of the CCB and specialists will be
+contacted on a ``when needed''-basis. There will likely be one representative
+from each module with the exception that some modules representatives will be
+considered experts instead, so that they will not be needed for each meeting.
 
-The software in our case is as described earlier divided into modules. Each module consists of around five developers and they're all
-located in the same working area. The changes made on this level are traced through commit-comments and the discussion is taken within
-the group orally.
+The software in our case is as described earlier divided into modules. Each
+module consists of around five developers and they're all located in the same
+working area. The changes made on this level are traced through commit-comments
+and the discussion is taken within the group orally.
 
-The CCB are only involved when it comes to changes that cover more than one module (the API between modules is modified).
-In the case that the CCB gets involved, it will pretty much handle change requests that traditional way, namely:
+The CCB are only involved when it comes to changes that cover more than one
+module (the API between modules is modified). In the case that the CCB gets
+involved, it will pretty much handle change requests that traditional way,
+namely:
 
 \begin{enumerate}
  \item A change is submitted to the SCM-manager.
  \item The SCM-manager decides if this change needs a meeting.
  \item If a meeting is needed, one is planned.
- \item On the meeting the chairman takes input and decide to approve or note depending on the input.
+ \item On the meeting the chairman takes input and decide to approve or note
+depending on the input.
 \end{enumerate}
 
-% Hur stor ccb?
-% Hur rigorös CR kontroll?
+\subsection{The change process}
+The main idea behind configuration control is to achieve control of changes,
+what impact they'll have and their costs.
 
-\subsection{Branching Pattern}\printindex
+Since this company is relatively small, the extent of CCB and it's usage will be
+somewhat limited in contrary to the general idea of a CCB. The CCB consist of
+the normal line up with: chairperson, secretary, members and specialists
+\cite{daniels}. We will select the project manager to be the chairman and the
+secretary will be the configuration manager in the company. The project manager
+will appoint appropriate people to be members of the CCB and specialists will be
+contacted on a ``when needed''-basis. There will likely be one representative
+from each module with the exception that some modules representatives will be
+considered experts instead, so that they will not be needed for each meeting.
 
-As the company hasn't used any form of SCM-tool previously explicit branching didn't exist.
-The copying of code between subgroups working on different modules however created implicit branches whenever two version weren't in sync. This creates an implicit feature branch model with merges at each release and sometimes in between but not very often as those merges are hard to do and requires that all of the changes made by the other team be merged together with the needed features/changes. This makes the merges very hard to do when it's finally time to do so and is the cause of the long merging periods/missed deadlines.
+The software in our case is as described earlier divided into modules. Each
+module consists of around five developers and they're all located in the same
+working area. The changes made on this level are traced through commit-comments
+and the discussion is taken within the group orally.
 
-The sporadic merges also gives a composition model but where the choices to make a composition of are very limited (the one we have since release or a dev. one) leading to collaboration problems.
+The CCB are only involved when it comes to changes that cover more than one
+module (the API between modules is modified). In the case that the CCB gets
+involved, it will pretty much handle change requests that traditional way,
+namely:
 
-The branching pattern we propose on the module level are to have each group to develop their module in  a developement branch and when it's \emph{reasonably} stable merge that to a
+\begin{enumerate}
+ \item A change is submitted to the SCM-manager.
+ \item The SCM-manager decides if this change needs a meeting.
+ \item If a meeting is needed, one is planned.
+ \item On the meeting the chairman takes input and decide to approve or note
+depending on the input.
+\end{enumerate}
+
+The exception to the above rule are changes that are planned to already
+released branches where the needs to be involved since the changes need more
+rigorous control as they carry more risk not going through the normal
+freeze/testing that predates a release.
+
 
 \subsection{Bill of Material}
 
-The company releases a new product every 6 months which results we have several different products to maintain. A problem is that when a customer finds a bug or wants a new feature in a previous release The Problem Company can't reproduce this system or it's very hard. We will need something so we both know exactly what system the customer is using and so the programmer who will fix this problem easy can reconstruct the system to work on. A way to do this is to use a Bill of Material (BoM). When we release a product we then save information about the release such as which version every component is using, what hardware are we using, which features are implemented, test information etc.
-When a customer has a problem with a certain release we can look at the BoM and know exactly what system the customer is using and we can start working on a fix right away.
-We will also need version control of the product to get the correct version of each component in the program.
-Everyone in the project must be able to find this BoM without too much effort and we need a system which makes it easy to setup a certain BoM on the computer which the programmer is using. Otherwise we loose the benefits with the BoM. The software which the company is producing are used on specific cellphones so we need to be able to reproduce the hardware somehow. This can be done by storing some cellphones but very often will the software not interact with the actual hardware and we can then focus on just software information. In the BoM we store both software information about our product but also the software the cellphone is using.
+The company releases a new product every 6 months which results in several
+different products to maintain. A problem is that when a customer finds a bug or
+wants a new feature in a previous release The Problem Company can't reproduce
+this system or it's very hard. We will need something so we both know exactly
+what system the customer is using and so the programmer who will fix this
+problem easy can reconstruct the system to work on. A way to do this is to use a
+Bill of Material (BoM). When we release a product we then save information about
+the release such as which version every component is using, what hardware are we
+using, which features are implemented, test information etc. When a customer has
+a problem with a certain release we can look at the BoM and know exactly what
+system the customer is using and we can start working on a fix right away. We
+will also need version control of the product to get the correct version of each
+component in the program. Everyone in the project must be able to find this BoM
+without too much effort and we need a system which makes it easy to setup a
+certain BoM on the computer which the programmer is using. Otherwise we loose
+the benefits with the BoM. The software which the company is producing are used
+on specific cellphones so we need to be able to reproduce the hardware somehow.
+This can be done by storing some cellphones but very often will the software not
+interact with the actual hardware and we can then focus on just
+software information. In the BoM we store both software information about our
+product but also the software the cellphone is using.
 
 
 \section{Tools}
-With eclipse they have several different add-ons which makes it hard for them to use another tool. An approach building upon this platform, in the from of another plug-in would therefore probably be the best solution.
+
+\subsection{Version control}
+
+
+\subsubsection{Considerations}
+The branching patterns chosen for the company on the higher level don't have to
+much of a requirement for advanced branch handling but the backporting of fixes
+from the development branch to the release branches is a quite frequent
+workflow and should be made easy. The releases need to be built from a
+collection of releases and this could either be made with some kind script
+checking out the specified versions of the modules or version of the modules
+with the configurations and script verions controlled as well or as just the
+build script with the modules assed to this project as submodules if the tool
+has support for this. The latter is preferred if possible. As the developers
+are mostly using eclipse as development platform integration with this is a big
+advantage. The company will not outsource or create another division for the
+forseeable future so a single central repository would work well and the
+network can be utilized at LAN-speeds.
+
+\subsubsection{Choices}
+From the above requirements the choices are quite open. Most tools support the
+branching required and the cherry-picking of changes can be made in most tools
+albeit more or less easily. The distributed nature is not needed as access to
+the server is good and most developers are not experienced enough to take
+advantages of local commits and branches, and those that are can work that way
+against the server using personal branches.
+
+
 
 \bibliography{refs}
 \bibliographystyle{plain}
