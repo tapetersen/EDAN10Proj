@@ -1,6 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8x]{inputenc}
 \usepackage{cite}
+\usepackage{url}
 
 %opening
 \title{SCM plan for a troubling company}
@@ -364,11 +365,21 @@ network can be utilized at LAN-speeds.
 \subsubsection{Choices}
 From the above requirements the choices are quite open. Most tools support the
 branching required and the cherry-picking of changes can be made in most tools
-albeit more or less easily. The distributed nature is not needed as access to
-the server is good and most developers are not experienced enough to take
-advantages of local commits and branches, and those that are can work that way
-against the server using personal branches.
+albeit more or less easily. Those that don't have it can generate patches for
+the changeset and those can be applied to the desired branch. The distributed
+nature is not needed as access to the server is good and most developers are not
+experienced enough to take advantages of local commits and branches, and those
+that are can work that way against the server using personal branches. 
 
+We will recommend using at \emph{SVN}\footnote{Subversion} \cite{SVN}. SVN is
+an open source project that started with a goal of building a tool similar to
+the older CVS but correcting a number of problems CVS had as in the design. It
+is very mature, used extensively and supports all the features the company
+needs. It also has an eclipse plugin that is very well maintained and
+installable as from the standard eclipse repositories. The layout we suggest is
+to keep the modules as their own projects in their own repositories and setting
+up a build environment using what's called \emph{svn:externals} to create a main
+project that can be used for building.
 
 
 \bibliography{refs}
